@@ -1,3 +1,12 @@
 #pipipipi{
     display: flex;
 }
+
+/*Esta clase define la estatura de esbeban(preceptor)*/
+#estebanquito{
+    border: 0.1px;
+}
+.espaciado{
+    padding: 5%;
+    background-color: red;
+}
