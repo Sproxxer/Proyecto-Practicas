@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/estilosindex.css">
 </head>
 <body>
+    <!--navbar Martin -->
     <nav class="navbar navbar-expand-lg mb-1 p-3 border-bottom border-success">
         <div class="container-fluid">
             <a href="#inicio" class="navbar-brand">Menu</a>
@@ -28,6 +29,9 @@
                     <li class="nav-item">
                         <a href="#obsoletos" class="nav-link">Pedidos obsoletos</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">Cerrar Sesion</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -37,31 +41,172 @@
 
     </section>
 
-    <section id="cargar" class="">
-        <!-- Esto es el section -->
-        <form class="container">
-            <div class="mb-3">
-                <label class="form-label" for="">Asunto:</label><br>
-                <input type="text" name="" value="" placeholder="" class="textboxform">
+    <section id="cargar" class="p-3">
+        <!--Formulario de carga Francisco -->
+        <h2 class="p-1">Cargar Pedido</h2><br>
+        <!-- Los input estan supuestos a cambiar -->
+        <form class="form container needs-validation" novalidate>
+            <div class="row">
+                <div class="mb-3 input-group col-3">
+                    <div class="input-group">
+                        <input type="text" aria-label="Nombre" class="form-control" placeholder="Nombre" required>
+                        <input type="text" aria-label="Apellido" class="form-control" placeholder="Apellido" required>
+                    </div>
+                </div>
+                <div class="mb-3 col-7">
+                    <input type="text" aria-label="Dispositivo"  class="form-control" placeholder="Dispositivo">
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="" class="form-label">Descripción:</label><br>
-                <textarea rows="2" cols="50" class="textboxform"></textarea>
+            <div class="pb-3">    
+                <div class="input-group mb-3">
+                    <textarea rows="2" cols="50" aria-label="Descripcion del problema" class="form-control" placeholder="Descripcion del problema"></textarea>
+                </div><br>
+                <div>
+                    <button type="submit" class="btn btn-light">Cargar</button>
+                </div>
             </div>
             
         </form>
     </section>
 
-    <section id="admin" class="">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolore deserunt veritatis explicabo eligendi iure eaque in similique fugit, a quas vitae, facilis perspiciatis ut voluptas recusandae exercitationem voluptate temporibus.
+    <section id="admin" class="p-3">
+        <!--Formularios de admin Facundo,Francisco y Martin-->
+        <!-- Los input estan supuestos a cambiar -->
+        <h2> Administracion de pedidos</h2>
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-md-5 p-5 rounded adminchargebox">
+                        <select class="form-select mb-3" id="inputGroupSelect01">
+                            <option selected>Seleccione la tabla de busqueda</option>
+                            <option value="1">Clientes</option>
+                            <option value="2">Pedidos</option>
+                        </select>
+                            <select class="form-select mb-3" id="inputGroupSelect01">
+                                <option selected>Seleccione el dato de busqueda</option>
+                                <option value="1">Nombre</option>
+                                <option value="2">Apellido</option>
+                                <option value="3">Dispositivo</option> 
+                            </select>
+                    <input type="text" class="form-control mb-3" name="" id="" placeholder="Inserte el dato">
+                    <button type="button" class="btn btn-light">Buscar</button>
+                </div>
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-6 p-5 rounded adminchargebox">
+                    <form class="container-fluid">
+                        <div class="row">
+                            <div class="mb-3 input-group col-5">
+                                <input type="text" aria-label="Nombre" class="form-control" placeholder="Nombre">
+                                <input type="text" aria-label="Apellido" class="form-control" placeholder="Apellido">
+                            </div>
+                            <div class="mb-3 col-7">
+                                
+                                <input type="text" class="form-control" placeholder="Dispositivo">
+                            </div>
+                        </div>
+                        <div class="pb-3">
+                            <div class="input-group has-validation mb-3">
+                                <textarea rows="2" cols="50" class="form-control" placeholder="Descripcion del problema"></textarea>
+                                <div class="invalid-feedback">
+                                    Casilla incompleta. Por favor complete con los datos correspondientes. 
+                                </div>
+                            </div>
+                                <button type="button" class="btn btn-light">Modificar</button>
+                                <button type="button" class="btn btn-light">Borrar</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="lista" class="">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum fugiat doloribus est aliquam aliquid maiores! Dolorem ex molestiae itaque, aperiam magni accusamus est vel ullam soluta quia expedita doloribus temporibus.adslssssssssssssssssssssssssssssssssssssssssssssssss
+    <section id="lista" class="p-1">
+        <!--Lista Pedidos/Cliente Facundo -->
+        <h2>Lista</h2>
+        <div class="container mt-5">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr class="border-bottom border-success">
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Dispositivo</th>
+                        <th>Problema</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan</td>
+                        <td>Perez</td>
+                        <td>Telefono</td>
+                        <td>Pantalla rota</td>
+                    </tr>
+                    <tr>
+                        <td>Ana</td>
+                        <td>Garcia</td>
+                        <td>Computadora</td>
+                        <td>Bateria no carga</td>
+                    </tr>
+                    <tr>
+                        <td>Maria</td>
+                        <td>Lopez</td>
+                        <td>Tablet</td>
+                        <td>Botones no responden</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos</td>
+                        <td>Martinez</td>
+                        <td>Telefono</td>
+                        <td>Altavoz no funciona</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
-    <section id="obsoletos" class="">
-        Aqui van los pedidos obsoletos.
-        <br>
-        obsoletosss
+    <section id="obsoletos" class="p-1">
+        <!--Lista de Pedidos Obsoletos Facundo -->
+        <h2>Pedidos obsoletos</h2>
+        <div class="container mt-5">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr class="border-bottom border-success">
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Dispositivo</th>
+                        <th>Problema</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td>Pedro</td>
+                        <td>Juarez</td>
+                        <td>Notebook</td>
+                        <td>Ruptura de pantalla</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Ana</td>
+                        <td>Garcia</td>
+                        <td>Computadora</td>
+                        <td>Bateria no carga</td>
+                    </tr>
+                    <tr>
+                        <td>Maria</td>
+                        <td>Lopez</td>
+                        <td>Tablet</td>
+                        <td>Botones no responden</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos</td>
+                        <td>Martinez</td>
+                        <td>Telefono</td>
+                        <td>Altavoz no funciona</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         
     </section>
 
